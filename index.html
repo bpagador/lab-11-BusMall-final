@@ -6,10 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Welcome To Bus Mall</title>
 </head>
 
 <body>
+    <header>
+        <h1>Pick a product, any product, they're all dumb!</h1>
+        <h2>Survey says:</h2>
+    </header>
+
+    <form id="survey-form">
+        <div id="survey-container">
+
+            <label>
+                <span id="P1"></span>
+                <input type="radio" name="product" value="">
+                <img src="" id="P1-img">
+            </label>
+
+            <label>
+                <span id="P2"></span>
+                <input type="radio" name="product" value="">
+                <img src="" id="P2-img">
+            </label>
+
+            <label>
+                <span id="P2"></span>
+                <input type="radio" name="product" value="">
+                <img src="" id="P2-img">
+            </label>
+
+        </div>
+
+        <button type="submit" form="survey-form" id="submit-button">Submit</button>
+        
+    </form>
 
     <script type="module" src="app.js"></script>
 </body>
