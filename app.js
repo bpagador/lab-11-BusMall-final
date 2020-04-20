@@ -1,10 +1,9 @@
-//import product list from product-list.js 
 import productList from '../data/product-list.js';
-//import function that gets three random products to display
 import getRandomProducts from '../utils/get-random-products.js';
-import findById from '../utils/find-by-id.js';
+import { incrementTimesSeen, incrementTimesClicked } from '../utils/increment-functions.js';
+import updateChoicesArray from '../utils/stringify.js';
 
-let votesArray = [];
+let choicesArray = [];
 let clickCounter = 0;
 
 //get elements from DOM
@@ -24,6 +23,27 @@ const survey = document.getElementById('survey-form');
 
 getRandomSurveyProducts();
 
+survey.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const userChoice = document.querySelector('input[type=radio]:checked').value;
+    
+    incrementTimesSeen(choicesArray, userChoice);
+    incrementTimesClicked(choicesArray, userChoice);
+
+    updateChoicesArray();
+
+    clickCounter++;
+
+    if (clickCounter >= 3) {
+        window.location = '../results-page';
+    } else {
+        getRandomSurveyProducts();
+    }
+});
+
+incrementTimesSeen();
+incrementTimesClicked();
+
 function getRandomSurveyProducts() {
     radio1.checked = false;
     radio2.checked = false;
@@ -42,4 +62,8 @@ function getRandomSurveyProducts() {
     product3.textContent = randomArray[2].name;
     productImg3.src = randomArray[2].image;
     radio3.value = randomArray[1].id;
+
+    incrementTimesSeen(choicesArray, randomArray[0].id);
+    incrementTimesSeen(choicesArray, randomArray[1].id);
+    incrementTimesSeen(choicesArray, randomArray[2].id);
 }

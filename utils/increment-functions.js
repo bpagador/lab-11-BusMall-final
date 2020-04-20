@@ -1,4 +1,4 @@
-import findById from './find-by-id.js';
+import findById from '../utils/find-by-id.js';
 
 export function addItem(votes, id) {
     const productObject = {
@@ -9,7 +9,7 @@ export function addItem(votes, id) {
     votes.push(productObject);
 }
 
-export function incrementTimeSeen(votes, id) {
+export function incrementTimesSeen(votes, id) {
     let productObject = findById(votes, id);
 
     if (!productObject) {
