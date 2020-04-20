@@ -34,7 +34,7 @@ survey.addEventListener('submit', (event) => {
 
     clickCounter++;
 
-    if (clickCounter >= 3) {
+    if (clickCounter >= 25) {
         window.location = '../results-page';
     } else {
         getRandomSurveyProducts();
