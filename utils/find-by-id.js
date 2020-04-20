@@ -1,10 +1,9 @@
-export default function findById(array, itemId) {
-    let itemFound = null;
-
-    array.forEach(element => {
-        if (element.id === itemId) { 
-            itemFound = element; }
-    });
-
-    return itemFound;
+export default function findById(items, id){
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.id === id) {
+            return item;
+        }
+    }
+    return null;
 }

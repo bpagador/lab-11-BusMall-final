@@ -1,7 +1,11 @@
 //import product list from product-list.js 
-import productList from '../data/productList.js';
+import productList from '../data/product-list.js';
 //import function that gets three random products to display
-import { getRandomProducts } from '../utils/getRandomProducts.js';
+import getRandomProducts from '../utils/get-random-products.js';
+import findById from '../utils/find-by-id.js';
+
+let votesArray = [];
+let clickCounter = 0;
 
 //get elements from DOM
 let product1 = document.getElementById('P1');
@@ -12,13 +16,30 @@ let productImg1 = document.getElementById('P1-img');
 let productImg2 = document.getElementById('P2-img');
 let productImg3 = document.getElementById('P3-img');
 
-const randomArray = getRandomProducts(productList);
+let radio1 = document.getElementById('radio1');
+let radio2 = document.getElementById('radio2');
+let radio3 = document.getElementById('radio3');
 
-product1.textContent = randomArray[0].name;
-productImg1.src = randomArray[0].name;
+const survey = document.getElementById('survey-form');
 
-product2.textContent = randomArray[1].name;
-productImg2.src = randomArray[1].name;
+getRandomSurveyProducts();
 
-product3.textContent = randomArray[2].name;
-productImg3.src = randomArray[2].name;
+function getRandomSurveyProducts() {
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = false;
+
+    const randomArray = getRandomProducts(productList);
+
+    product1.textContent = randomArray[0].name;
+    productImg1.src = randomArray[0].image;
+    radio1.value = randomArray[0].id;
+
+    product2.textContent = randomArray[1].name;
+    productImg2.src = randomArray[1].image;
+    radio2.value = randomArray[1].id;
+
+    product3.textContent = randomArray[2].name;
+    productImg3.src = randomArray[2].image;
+    radio3.value = randomArray[1].id;
+}

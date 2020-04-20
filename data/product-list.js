@@ -1,120 +1,120 @@
 const productList = [
     {
-        id: 1,
+        id: '1',
         name: 'Bag',
         image: '../assets/bag.jpg',
 
     },
     {
-        id: 2,
+        id: '2',
         name: 'Banana',
         image: '../assets/banana.jpg',
 
     },
     {
-        id: 3,
+        id: '3',
         name: 'Bathroom',
         image: '../assets/bathroom.jpg',
 
     },
     {
-        id: 4,
+        id: '4',
         name: 'Boots',
         image: '../assets/boots.jpg',
 
     },
     {
-        id: 5,
+        id: '5',
         name: 'Breakfast',
         image: '../assets/breakfast.jpg',
 
     },
     {
-        id: 6,
+        id: '6',
         name: 'Bubblegum',
         image: '../assets/bubblegum.jpg',
 
     },
     {
-        id: 7,
+        id: '7',
         name: 'Chair',
         image: '../assets/chair.jpg',
 
     },
     {
-        id: 8,
+        id: '8',
         name: 'Cthulhu',
         image: '../assets/cthulhu.jpg',
 
     },
     {
-        id: 9,
+        id: '9',
         name: 'Dog-duck',
         image: '../assets/dog-duck.jpg',
 
     },
     {
-        id: 10,
+        id: '10',
         name: 'Dragon',
         image: '../assets/dragon.jpg',
 
     },
     {
-        id: 11,
+        id: '11',
         name: 'Pen',
         image: '../assets/pen.jpg',
 
     },
     {
-        id: 12,
+        id: '12',
         name: 'Pet-sweep',
         image: '../assets/pet-sweep.jpg',
 
     },
     {
-        id: 13,
+        id: '13',
         name: 'Scissors',
         image: '../assets/scissors.jpg',
 
     },
     {
-        id: 14,
+        id: '14',
         name: 'Shark',
         image: '../assets/shark.jpg',
 
     },
     {
-        id: 15,
+        id: '15',
         name: 'Sweep',
         image: '../assets/sweep.png',
 
     },
     {
-        id: 16,
+        id: '16',
         name: 'Tauntaun',
         image: '../assets/tauntaun.jpg',
 
     },
     {
-        id: 17,
+        id: '17',
         name: 'Unicorn',
         image: '../assets/unicorn.jpg',
 
     },
     {
-        id: 18,
+        id: '18',
         name: 'USB',
         image: '../assets/usb.gif',
 
     },
     {
-        id: 19,
+        id: '19',
         name: 'Water Can',
         image: '../assets/water-can.jpg',
 
     },
     {
-        id: 20,
+        id: '20',
         name: 'Wine Glass',
         image: '../assets/wine-glass.jpg',
 
