@@ -1,13 +1,5 @@
 import findById from '../utils/find-by-id.js';
 
-export function addItem(votes, id) {
-    const productObject = {
-        id: id,
-        timesSeen: 0,
-        timesClicked: 0,
-    };
-    votes.push(productObject);
-}
 
 export function incrementTimesSeen(votes, id) {
     let productObject = findById(votes, id);
@@ -29,4 +21,13 @@ export function incrementTimesClicked(votes, id) {
 
     chosenProduct.timesClicked++;
 
+}
+
+export function addItem(votes, id) {
+    const productObject = {
+        id: id,
+        timesSeen: 0,
+        timesClicked: 0,
+    };
+    votes.push(productObject);
 }

@@ -1,7 +1,7 @@
 import productList from '../data/product-list.js';
 import getRandomProducts from '../utils/get-random-products.js';
 import { incrementTimesSeen, incrementTimesClicked } from '../utils/increment-functions.js';
-import updateChoicesArray from '../utils/stringify.js';
+
 
 let choicesArray = [];
 let clickCounter = 0;
@@ -41,8 +41,10 @@ survey.addEventListener('submit', (event) => {
     }
 });
 
-incrementTimesSeen();
-incrementTimesClicked();
+
+function updateChoicesArray() {
+    localStorage.setItem('CHOICES', JSON.stringify(choicesArray));
+}
 
 function getRandomSurveyProducts() {
     radio1.checked = false;
@@ -61,7 +63,7 @@ function getRandomSurveyProducts() {
 
     product3.textContent = randomArray[2].name;
     productImg3.src = randomArray[2].image;
-    radio3.value = randomArray[1].id;
+    radio3.value = randomArray[2].id;
 
     incrementTimesSeen(choicesArray, randomArray[0].id);
     incrementTimesSeen(choicesArray, randomArray[1].id);

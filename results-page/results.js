@@ -2,7 +2,7 @@ import findById from '../utils/find-by-id.js';
 import productList from '../data/product-list.js';
 
 const results = document.getElementById('results');
-const choiceResults = JSON.parse(localStorage.getItem('CHOICES-MADE'));
+const choiceResults = JSON.parse(localStorage.getItem('CHOICES'));
 
 for (let i = 0; i < choiceResults.length; i++) {
     const productLineItem = choiceResults[i];
@@ -13,10 +13,10 @@ for (let i = 0; i < choiceResults.length; i++) {
     const product = findById(productList, productLineItem.id);
     productData.textContent = product.name;
 
-    const seenData = document.getElementById('td');
+    const seenData = document.createElement('td');
     seenData.textContent = productLineItem.timesSeen;
 
-    const clickedData = document.getElementById('td');
+    const clickedData = document.createElement('td');
     clickedData.textContent = productLineItem.timesClicked;
 
     tr.appendChild(productData);
